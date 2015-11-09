@@ -67,7 +67,13 @@
 {
     return dict;
 }
-
+#pragma mark - 父类方法重载
+-(void)LoadModelFromString:(NSString *)_moduleText
+{
+    id _rootJsonValue =[doJsonHelper LoadDataFromText : _moduleText];
+    NSDictionary *datas = [doJsonHelper GetOneNode:_rootJsonValue :@"data"];
+    [dict addEntriesFromDictionary:datas];
+}
 #pragma mark -
 #pragma mark - 同步异步方法的实现
 
