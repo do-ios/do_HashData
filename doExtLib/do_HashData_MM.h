@@ -8,7 +8,8 @@
 
 #import "do_HashData_IMM.h"
 #import "doMultitonModule.h"
+#import "doIHashData.h"
 
-@interface do_HashData_MM : doMultitonModule<do_HashData_IMM>
+@interface do_HashData_MM : doMultitonModule<do_HashData_IMM,doIHashData>
 
 @end
